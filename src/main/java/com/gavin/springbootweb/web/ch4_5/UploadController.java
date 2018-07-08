@@ -20,7 +20,7 @@ public class UploadController {
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public @ResponseBody String upload(MultipartFile file){
         try {
-            FileUtils.writeByteArrayToFile(new File("E:/upload" 
+            FileUtils.writeByteArrayToFile(new File("E:/upload/" 
                 + file.getOriginalFilename()), file.getBytes());
             return "ok";
         } catch (Exception e) {
